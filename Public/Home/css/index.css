@@ -1,0 +1,56 @@
+
+#content{ overflow: hidden;}
+#content .wrap { width: 1018px;}
+.Ns { width: 564px; height: 382px; background: #e5e5e5;  margin-right: 18px;  float: left;}
+.Ns .icon { background: url('../images/title_bg1.gif') no-repeat 0px -2px; float: left;}
+.Ns .more { float: left; display: block; float: right;  margin-right: 24px;  width: 36px; height: 36px; background: url('../images/more.jpg') no-repeat;}
+.Ns .text { padding: 18px 30px;}
+.Ns .text li { padding-bottom: 14px;}
+.Ns .text li:hover a { color: #7396c2;}
+.Ns .text  span { display: block; float: left;}
+.Ns .text  span h3 a { font-size: 16px; line-height: 16px; font-family: '微软雅黑'; color: #4e4e4e;}
+.Ns .text  span p { width: 414px; line-height: 16px; color: #656565;}
+.Ns .text .time { padding-right: 26px;}
+.Ns .text .time  h3 { font-size: 30px; color: #696969; font-weight: normal; font-family: 'Arial';}
+.Ns .text .time p { font-size: 11px; color: #6b6b6b; width: auto;}
+
+.Pr { width: 418px; height: 382px; background: #e5e5e5;  margin-right: 18px; float: left;}
+.Pr .icon { background: url('../images/title_bg1.gif') no-repeat 0px -43px;}
+.Pr .product { padding: 24px 18px 12px;}
+.Pr .product li { padding-left: 18px; height: 30px; background:  #a0a0a0 url('../images/product_bg.gif') no-repeat right; margin-bottom: 14px;}
+.Pr .product li:hover a { color: white;}
+.Pr .product a { color: #4d4d4d; font-size: 18px; line-height: 30px; font-family:'微软雅黑';}
+
+#content .main { width: 980px; padding: 0px 10px 12px; margin-top: 22px; background: #e5e5e5;} 
+.main img { display: block; border: 1px solid #7b7b7b; margin-top: 12px; float: left;}
+.Ab{ width: 724px;  float: right;}
+#content .Ab .title { margin-bottom: 18px;}
+.Ab .icon {  background: url('../images/title_bg1.gif') no-repeat 0px -84px;}
+.Ab .text1 { font-size: 14px; text-indent: 2em; color: #5e5e5e; line-height: 24px; font-family: '微软雅黑'; padding: 0px 22px;}
+
+
+.Cu .icon, .Ho .icon { margin-left: 10px; background: url('../images/title_bg1.gif') no-repeat 0px -168px;}
+.Cu .title, .Ho .title, .Sh .icon{ margin-left: 0px;}
+
+.Cu .text { padding: 14px 16px 0px;}
+.Cu .text img { display: block; float: left; border: 1px solid #868686;}
+.Cu .text p { float: left; padding-left: 24px; width: 724px; font-family: '微软雅黑'; text-indent: 2em; line-height: 24px; font-size: 14px; color: #4f4f4f;}
+
+.Ho .photo { padding: 30px 0px 0px 26px;}
+.Ho  img { padding-right: 34px;}
+
+.Sh .icon { margin-left: 10px; background: url('../images/title_bg1.gif') no-repeat 0px -125px;}
+
+.Sh ul {padding-top: 28px; padding-left: 48px;}
+.Sh li {width: 198px; float: left; margin-right: 40px;}
+.Sh li:hover a { color: blue;}
+.Sh li font { display: block; width: 198px; height: 198px; background: url('../images/img_bg.jpg') no-repeat;}
+.Sh li img { border: 1px solid #858585; margin-top: 2px; margin-left: 2px;}
+.Sh li a { display: block; line-height: 22px; margin: 0px 10px;}
+
+
+
+
+
+
+

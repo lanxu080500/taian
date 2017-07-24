@@ -1,0 +1,17 @@
+
+.Ns .icon { background: url('../images/title_bg1.gif') no-repeat 0px -2px;}
+.Ns .title { border: 0px none;}
+
+.Ns .text {margin-top: 36px; padding-left: 30px;}
+.Ns .text li { height: 30px; margin-bottom: 20px;  background: url('../images/dot.gif') repeat-x left bottom;}
+.Ns .text li a, .Ns .text li font{ line-height: 30px; color: #696969; font-size: 16px; font-family: '微软雅黑';}
+.Ns .text li font {padding-left: 740px;}
+.Ns .text li:hover a, .Ns .text li:hover font { color: red;} 
+
+.Ns .list { display: block; margin-top: 50px;  text-align: right; padding-right: 10px;} 
+.Ns .list a { margin-right: 12px;} 
+.Ns .list a:hover {text-decoration: underline;} 
+.Ns .list font { padding-right: 5px;} 
+.Ns strong { font-weight: normal; padding: 0px 2px; color: red;}
+
+

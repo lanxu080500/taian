@@ -1,0 +1,24 @@
+
+.Fs .icon { background: url("../images/title_bg1.gif") no-repeat 0px -322px;}
+.Fs .text { padding-left: 42px; padding-top: 52px;}
+.Fs .text p, .Fs .text p font, .Fs .text p a, .Fs .text span, .Fs .text strong { font-size: 16px; font-family: '微软雅黑';}
+.Fs .text p { padding-bottom: 12px;}
+.Fs .text h2 { font-size: 18px; font-family: '微软雅黑'; padding: 20px 0px;}
+.Fs .text p font { color: #f38a2b;}
+.Fs .text p a { color: #0057ff;}
+.Fs .text p a:hover { text-decoration: underline;} 
+.Fs .text span { display: block; margin: 70px 0px 22px;}
+.Fs .text div { padding-left: 20px;}
+.Fs .text .photo img { padding-right: 58px;}
+.Fs .text  strong { display: block; font-weight: normal; padding: 78px 0px 42px; }
+
+.Fs .wrap { position: relative; }
+.Fs .pre {top: 60px; left: 0px;}
+.Fs .next {top: 60px; right: 20px;}
+.Fs .text .company { position: relative; margin-left: 20px; padding: 0px; height: 188px; overflow: hidden; width: 856px;}
+.Fs .company ul { position: absolute;}
+.Fs .company ul li{ float: left; padding-right: 20px;}
+.Fs .company ul li img:hover {cursor: pointer;}
+
+#footer { margin-top: 14px;}
+

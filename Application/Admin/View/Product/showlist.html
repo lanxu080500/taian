@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+        <title>产品列表</title>
+        <css href="__ADMIN__css/mine.css" />
+        <js href="__COMMON__js/jquery-1.8.3.min.js" />
+    </head>
+    <body>
+        <style>
+            .tr_color { background-color: #9F88FF; }
+            .div_search span { float: left;padding: 0 1em; }
+        </style>
+        <div class="div_head">
+            <span>
+                <span style="float: left;">当前位置是：产品管理-》产品列表</span>
+                <span style="float: right; margin-right: 8px; font-weight: bold;">
+                    <a style="text-decoration: none;" href="{:U('add')}">【添加产品】</a>
+                </span>
+            </span>
+        </div>
+        <div></div>
+        <div class="div_search">
+            <span>
+                分类 <select name="cid" class="cid">
+                    <option selected="selected" value="0">全部分类</option>
+                    <foreach name="cate_data" item="c">
+                    <if condition="$cid eq $c[id]">
+                        <option value="{$c.id}" selected="true">{$c.cate_name}</option>
+                    <else />
+                        <option value="{$c.id}">{$c.cate_name}</option>
+                    </if>
+                    </foreach>
+                </select>
+            </span>
+            <span>
+                排序 <select name="order" class="order">
+                    <if condition="$Think.get.order eq 'asc'">
+                        <option value="desc">降序排列</option>
+                        <option value="asc" selected="true">升序排列</option>
+                    <else />
+                        <option value="desc" selected="true">降序排列</option>
+                        <option value="asc">升序排列</option>
+                    </if>
+                </select>
+            </span>
+            <span>
+                推送 <select name="push" class="push">
+                    <option value="0" selected="true">显示所有</option>
+                    <option value="1" <if condition="$Think.get.push eq 1"> selected </if> >只显示推送</option>
+                    <option value="-1" <if condition="$Think.get.push eq -1"> selected </if> >只显示不推送</option>
+                </select>
+            </span>
+        </div>
+        <em style="color: #f00;">显示的价格会随规格改变而改变</em>
+        <div style="font-size: 13px; margin: 10px 5px;">
+            <table class="table_a" border="1" width="100%">
+                <tbody><tr style="font-weight: bold;">
+                        <td>序号</td>
+                        <td>产品名称</td>
+                        <td>封面图片</td>
+                        <td>产品编号</td>
+                        <td>产品规格</td>
+                        <td>产品价格（元）</td>
+                        <td>添加时间</td>
+                        <td>更新时间</td>
+                        <td>产品分类</td>
+                        <td>状态</td>
+                        <td>推送</td>
+                        <td align="center" colspan="2">操作</td>
+                    </tr>
+
+                <foreach name="pro_data" item="p">
+                    <tr id="product{$p.id}">
+                        <td>{$p.id}</td>
+                        <td><a href="{:U('home/product/detail','id='.$p[id])}">{$p.name}</a></td>
+                        <td><img src="__UPLOAD__{$p.lit_pic}" height="60" width="60"></td>
+                        <td>{$p.number}</td>
+                        <td>
+                            <select name="" class="type">
+                                <foreach name="p.price" item="pp">
+                                <option value="{$pp.id}">{$pp.product_type}</option>
+                                </foreach>
+                            </select>
+                        </td>
+                        <td>
+                            <foreach name="p.price" key="key" item="pp">
+                            <if condition="$key eq 0">
+                            <div data-id="{$pp.id}">{$pp.product_price}</div>
+                            <else />
+                            <div data-id="{$pp.id}" style="display: none">{$pp.product_price}</div>
+                            </if>
+                            </foreach>
+                        </td>
+                        <td>
+                            {$p.addtime|date="Y-m-d",###}<br />
+                            {$p.addtime|date="H:i:s",###}
+                        </td>
+                        <td>
+                            {$p.updatetime|date="Y-m-d",###}<br />
+                            {$p.updatetime|date="H:i:s",###}
+                        </td>
+                        <td>{$p.cate_name}</td>
+                        <td>{$p.status|getStatus}</td>
+                        <td><input type="checkbox" name="is_push" id="" class="is_push" data-id="{$p.id}" value="{$p[is_push]}" <if condition="$p[is_push] eq 1"> checked </if> /></td>
+                        <td><a href="{:U('edit','id='.$p[id])}">修改</a></td>
+                        <td><a href="javascript:;" onclick="confirm('是否确认删除{$p.name}')?window.location.href='{:U('del','id='.$p[id])}':''">删除</a></td>
+                    </tr>
+                </foreach>
+
+                    <tr>
+                        <td colspan="20" style="text-align: center;">
+                            {$pageshow}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script type="text/javascript">
+            $(function(){
+                // 筛选-产品分类
+                $(".cid").change(function(){
+                    window.location.href = '__CONTROLLER__/showlist/cid/' + $(this).val();
+                });
+                // 筛选-排序方式
+                $(".order").change(function(){
+                    <if condition="isset($_GET[cid])">
+                    var cid = {$Think.get.cid};
+                    <else />
+                    var cid = 0;
+                    </if>
+                    window.location.href = '__CONTROLLER__/showlist/cid/' + cid + '/order/' + $(this).val();
+                });
+                // 筛选-是否推送
+                $(".push").change(function(){
+                    <if condition="isset($_GET[cid])">
+                    var cid = {$Think.get.cid};
+                    <else />
+                    var cid = 0;
+                    </if>
+                    <if condition="isset($_GET[order])">
+                    var order = '{$Think.get.order}';
+                    <else />
+                    var order = 'desc';
+                    </if>
+                    window.location.href = '__CONTROLLER__/showlist/cid/' + cid + '/order/' + order + '/push/' + $(this).val();
+                });
+                // 切换-产品规格
+                $(".type").change(function(){
+                    _this = $(this);
+                    divs = $(this).parents('td').next('td').children('div');
+                    divs.each(function(){
+                        $(this).css('display','none');
+                        if ($(this).attr('data-id')==_this.val()) {
+                            $(this).css('display','block')
+                        }
+                    });
+                });
+                // 切换-是否推送
+                $(".is_push").change(function(){
+                    var is_push = $(this).val();
+                    var pro_id = $(this).attr("data-id");
+                    var _this = $(this);
+                    $.ajax({
+                        url:"{:U('switchPush')}",
+                        data:{is_push:is_push,id:pro_id},
+                        success:function(data){
+                            _this.val(data["info"]);
+                        }
+                    })
+                })
+            })
+        </script>
+    </body>
+</html>

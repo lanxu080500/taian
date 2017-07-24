@@ -1,0 +1,21 @@
+
+#content .main { width: 980px; padding: 0px 10px 12px; margin-top: 22px;} 
+.main img { display: block; border: 1px solid #7b7b7b; margin-top: 12px; float: left;}
+.Ab{ width: 724px;  float: right;}
+#content .Ab .title { margin-bottom: 18px;}
+.Ab .icon {  background: url('../images/title_bg1.gif') no-repeat 0px -84px;}
+.Ab .text1 { font-size: 14px; text-indent: 2em; color: #5e5e5e; line-height: 24px; font-family: '微软雅黑'; padding: 0px 22px;}
+
+.Cu  {margin-top: 40px;}
+.Cu .icon { margin-left: 10px; background: url('../images/title_bg1.gif') no-repeat 0px -168px;}
+.Cu .title { margin-left: 0px;}
+
+.Cu .text { padding: 14px 16px 0px;}
+.Cu .text img { display: block; float: left; border: 1px solid #868686;}
+.Cu .text p { float: left; padding-left: 24px; width: 724px; font-family: '微软雅黑'; text-indent: 2em; line-height: 24px; font-size: 14px; color: #4f4f4f;}
+
+
+
+
+
+

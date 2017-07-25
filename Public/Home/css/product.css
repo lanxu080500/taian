@@ -1,0 +1,33 @@
+
+#content {width: 1000px;}
+
+.side{ width: 210px; float: left;}
+.Pr {}
+.Pr .title {padding-top: 0px;}
+.Pr .icon { background: url('../images/title_bg1.gif') no-repeat 0px -43px;}
+.Pr ul {}
+.Pr ul  li { margin-top: 20px; margin-left: 48px; padding-left: 24px; background: url('../images/product_side_ico.gif') no-repeat left center;}
+.Pr ul  li a { font-size: 14px; font-family: '微软雅黑'; color: #5e5e5e;}
+.Pr ul  li:hover a { color: red;}
+
+.product { width: 780px; float: right;}
+.crumbs { border-bottom: 1px solid black; display: block; padding-bottom: 12px; margin-top: 16px;}
+.product ul {padding-top: 26px; width: 758px; height: 560px; padding-left: 22px;}
+.product ul li { width: 184px; margin-bottom: 46px; float: left; margin-right: 40px;}
+.product ul li:hover a {color: blue;}
+.product ul li img {border: 1px solid #505050;}
+.product ul li a { display: block; height: 38px; padding: 0px 8px; line-height: 18px; margin-top: 6px;}
+
+.list {margin-top: 0px; -margin-bottom: 20px; padding-right: 120px;}
+
+#return {margin-left: 1110px;}
+
+
+
+
+
+
+
+
+
+

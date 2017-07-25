@@ -1,0 +1,8 @@
+
+#content .text { margin-top: 6px; padding-left: 12px;}
+
+.Cp .icon {background: url("../images/title_bg1.gif") no-repeat 0px -245px;}
+#content .text h2, #content .text p, #content .text .map { padding-left: 30px;}
+#content .text h2 { font-size: 18px; font-family: '微软雅黑'; font-weight: normal; padding-top: 32px; padding-bottom: 32px;}
+#content .text p { color: #4a4a4a; font-size: 12px; padding-bottom: 12px;}
+#content .text .map { display: block; margin-top: 14px;}
